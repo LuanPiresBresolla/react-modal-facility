@@ -1,5 +1,6 @@
 import ReactModal from 'react-modal'
-import { useReactModalFacility } from '../../lib/hooks/useReactModalFacility';
+import { useReactModalFacility } from 'react-modal-facility';
+// import { useReactModalFacility } from '../../lib/hooks/useReactModalFacility';
 
 const customStyles = {
   content: {
