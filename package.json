@@ -1,7 +1,7 @@
 {
   "name": "react-modal-facility",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "license": "MIT",
   "scripts": {
@@ -9,6 +9,16 @@
     "build:react": "tsc && vite build",
     "build": "set NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "preview": "vite preview"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LuanPiresBresolla/react-modal-facility.git"
   },
   "peerDependencies": {
     "react": "^18.2.0",
