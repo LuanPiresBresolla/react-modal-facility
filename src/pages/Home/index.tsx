@@ -1,4 +1,5 @@
-import { useReactModalFacility } from "../../lib/hooks/useReactModalFacility";
+// import { useReactModalFacility } from "../../lib/hooks/useReactModalFacility";
+import { useReactModalFacility} from 'react-modal-facility';
 
 export function Home() {
   const { openModal } = useReactModalFacility();

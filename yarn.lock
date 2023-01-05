@@ -2099,6 +2099,18 @@ react-lifecycles-compat@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-modal-facility@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/react-modal-facility/-/react-modal-facility-0.0.2.tgz#9a39437cf77c7f2603947413bbc15637e55bf721"
+  integrity sha512-TO+95xdoIvstVsbDkwcD7Fd+PvLXLOah/WXPk8QxntS3m4FJkDN0yxmIDG0Fn5iWn9zYG8JA8S8Jw2949WKp8g==
+
+react-modal-facility@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-modal-facility/-/react-modal-facility-0.0.3.tgz#35588daa7dbd7f1ffda74bc82741dbfa13748439"
+  integrity sha512-NN29maXktf/YCv9L4RE1sqbTDxD89Bx2T+rN34tai2fUglygLCWK3E8sQlVxyn9RUPqPalSeqwvwWeGrJE3fKg==
+  dependencies:
+    react-modal-facility "^0.0.2"
+
 react-modal@^3.16.1:
   version "3.16.1"
   resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.16.1.tgz#34018528fc206561b1a5467fc3beeaddafb39b2b"
@@ -2545,6 +2557,11 @@ util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
+
+uuid@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
+  integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
 
 v8flags@^2.1.1:
   version "2.1.1"

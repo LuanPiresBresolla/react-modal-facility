@@ -19,12 +19,12 @@ export default defineConfig({
       fileName: (format) => `react-modal-facility.${format}.js`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'styled-components'],
+      external: ['react', 'react-dom', 'uuid'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          'styled-components': 'styled',
+          'uuid': 'uuid',
         },
       },
     },
