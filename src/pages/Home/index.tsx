@@ -1,11 +1,11 @@
-// import { useReactModalFacility } from "../../lib/hooks/useReactModalFacility";
-import { useReactModalFacility} from 'react-modal-facility';
+import { useReactModalFacility } from "../../lib/hooks/useReactModalFacility";
+// import { useReactModalFacility} from 'react-modal-facility';
 
 export function Home() {
   const { openModal } = useReactModalFacility();
 
   function handleOpenModal() {
-    openModal('ModalExample', { title: 'MODAL EXAMPLE' }).then(response => {
+    openModal('ModalExample', { title: 'Primeiro modal' }).then(response => {
       console.log(response);
     }).catch(console.log);
   }

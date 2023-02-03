@@ -14,11 +14,13 @@ type IListModalsIsOpen = {
   props?: any;
 }
 
+type IKeyModal = globalThis.ReactModalFacility.ComponentsList;
+
 type IReactModalFacilityContextData = {
-  openModal: <T = any> (key: string, props?: any) => Promise<T>;
-  getProps: <T = any>(key: string) => T | undefined;
-  closeModal: (key: string, result?: any) => void;
-  isModalOpen: (key: string) => boolean;
+  openModal: <T = any> (key: IKeyModal, props?: any) => Promise<T>;
+  getProps: <T = any>(key: IKeyModal) => T | undefined;
+  closeModal: (key: IKeyModal, result?: any) => void;
+  isModalOpen: (key: IKeyModal) => boolean;
 };
 
 type IReactModalFacilityProviderProps = {
@@ -31,14 +33,14 @@ export const ReactModalFacilityContext = createContext({} as IReactModalFacility
 export function ReactModalFacilityProvider({ children, components }: IReactModalFacilityProviderProps) {
   const [listModalsIsOpen, setListModalsIsOpen] = useState<IListModalsIsOpen[]>([]);
 
-  function openModal<T = any>(key: string, props?: any) {
+  function openModal<T = any>(key: IKeyModal, props?: any) {
     return new Promise<T>((resolve, reject) => {
       const ModalComponent = components[key];
 
       if (ModalComponent) {
         const newModalInstance: IListModalsIsOpen = {
           id: uuid(),
-          key,
+          key: String(key),
           Component: ModalComponent,
           response: resolve,
           error: reject,
@@ -52,7 +54,7 @@ export function ReactModalFacilityProvider({ children, components }: IReactModal
     });
   }
 
-  function closeModal(key: string, result?: any) {
+  function closeModal(key: IKeyModal, result?: any) {
     const ModalComponent = listModalsIsOpen.find(modal => modal.key === key);
     if (ModalComponent) {
       setListModalsIsOpen(state => state.filter(item => item.id !== ModalComponent.id));
@@ -60,11 +62,11 @@ export function ReactModalFacilityProvider({ children, components }: IReactModal
     }
   }
 
-  function isModalOpen(key: string) {
+  function isModalOpen(key: IKeyModal) {
     return listModalsIsOpen.some(item => item.key === key)
   }
 
-  function getProps<T = any>(key: string): T | undefined {
+  function getProps<T = any>(key: IKeyModal): T | undefined {
     const ModalComponent = listModalsIsOpen.find(modal => modal.key === key);
     if (ModalComponent) return ModalComponent.props;
   }

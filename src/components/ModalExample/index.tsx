@@ -1,6 +1,6 @@
 import ReactModal from 'react-modal'
-import { useReactModalFacility } from 'react-modal-facility';
-// import { useReactModalFacility } from '../../lib/hooks/useReactModalFacility';
+// import { useReactModalFacility } from 'react-modal-facility';
+import { useReactModalFacility } from '../../lib/hooks/useReactModalFacility';
 
 const customStyles = {
   content: {
@@ -25,9 +25,6 @@ export function ModalExample() {
   const isOpen = isModalOpen('ModalExample');
   const props = getProps('ModalExample');
 
-  console.log(props);
-
-  // console.log('render ModalExample')
   const title = props.title;
 
   function handleCloseModal() {
